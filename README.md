@@ -1,6 +1,11 @@
 # SqlLoadFileIterate
 Loads file from the designated folder into given db/table
 
+## Imports
+  ```
+pip install mysql-connector-python
+  ```
+
 ## Requirements before run
 1. Update database credentials under:
   ```
