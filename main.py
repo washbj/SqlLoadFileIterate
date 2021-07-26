@@ -5,7 +5,6 @@ import os
 def load_Files(load_file_location, mycursor):
     i = 1
     try:
-        print("Folder already exists - skipping creation")
         for entry in os.scandir(load_file_location):
             if (entry.path.endswith(".csv")
             and entry.is_file()):
@@ -24,8 +23,9 @@ def load_Files(load_file_location, mycursor):
                 #print(mycursor)
                 print('Files processed: ' + str(i))
                 i += 1
-    except:
+    except Exception as e:
         print("Error occurred while loading csv into sql. Files prior to this error have already been processed.")
+        print("Specific error: " + str(e))
 
 
 # Press the green button in the gutter to run the script.
