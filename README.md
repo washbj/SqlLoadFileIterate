@@ -19,7 +19,10 @@ pip install mysql-connector-python
   ```
     load_file_location = "C:/ProgramData/MySQL/MySQL Server 8.0/Data/new_schema/"
 ```
-
+3. Update schema and table information:
+   ```
+    INTO TABLE new_schema.excel_dedup_table 
+```
 ## Considerations
 1. Files are processed one at a time. If an issue is encountered on the 101st file, the previous 100 files will have been loaded. Remove them from your load folder to prevent duplicate data.
 2. Ensure database table is created and ready before load.
