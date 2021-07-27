@@ -14,9 +14,8 @@ def load_Files(load_file_location, mycursor):
                 INTO TABLE new_schema.excel_dedup_table 
                 FIELDS TERMINATED BY ','	
                 ENCLOSED BY '\"'
-                ESCAPED BY '\"'
-                LINES TERMINATED BY '\\n'
-                 IGNORE 1 LINES;"""
+                LINES TERMINATED BY '\\r\\n'
+                IGNORE 1 LINES;"""
 
                 mycursor.execute(sql)
                 mydb.commit()
